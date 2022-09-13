@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * main - Prints "Putchar" followed by a new line
+ * main - Prints "putchar" followed by a new line
  *
  * Return: Always 0 .
  *
  */
 int main(void)
 {
-	_putchar('P');
+	_putchar('p');
 	_putchar('u');
 	_putchar('t');
 	_putchar('c');
