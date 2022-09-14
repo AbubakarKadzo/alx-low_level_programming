@@ -1,4 +1,4 @@
-void 0-main.c(void);
-void 1-main.c(void);
-int 2-largest_number.c(int a, b, c);
-int 3-print_remaining_days.c(int month, day, year);
+void positive_or_negative(int i);
+int largest_number(int a, int b, int c);
+int convert_day(int month, int day);
+void print_remaining_days(int month, int day, int year);
