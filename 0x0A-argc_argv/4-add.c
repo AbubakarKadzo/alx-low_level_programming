@@ -34,6 +34,7 @@ int num_checker(char *a)
 int main(int argc, char *argv[])
 {
 	int i, num, sum;
+
 	sum = 0;
 	for (i = 1; i < argc; i++)
 	{
