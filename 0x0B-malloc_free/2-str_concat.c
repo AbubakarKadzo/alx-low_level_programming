@@ -2,45 +2,39 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * str_concat - Write a function that concatenates two strings.
- * @s1: array 1
- * @s2: array 2
- * Return: Pointer
+ * str_concat - Entry point
+ * @s1: string 1
+ * @s2: string 2
+ * Return: pointer should point to a newly allocated space in memory or NULL
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i, j, k, l;
-	char *concat;
+	char *strnew = NULL;
+	unsigned int i;
+	int n1;
+	int n2;
+	int count;
 
+	count = 0;
 	if (s1 == NULL)
-	{
 		s1 = "";
-	}
 	if (s2 == NULL)
-	{
 		s2 = "";
-	}
-
-	i = 0, j = 0;
-	while (*(s1 + i) != '\0')
-		i++;
-	while (*(s2 + j) != '\0')
-		j++;
-
-	concat = malloc(i + j + 1);
-
-	if (concat == 0)
+	for (n1 = 0; s1[n1] != '\0'; n1++)
+		;
+	for (n2 = 0; s2[n2] != '\0'; n2++)
+		;
+	strnew = (char *)malloc((n1 + n2 + 1) * sizeof(char));
+	if (strnew == NULL)
 	{
-		return (0);
+		return (NULL);
 	}
-	for (k = 0; k < i; k++)
+	for (i = 0; s1[i] != '\0'; i++)
+		strnew[i] = s1[i];
+	for (; s2[count] != '\0'; i++)
 	{
-	       *(concat + k) = *(s1 + k);
+		strnew[i] = s2[count];
+		count++;
 	}
-	for (k = 0, l = i; k < j; l++, k++)
-	{
-	       *(concat + 1) = *(s2 + k);
-	}
-	*(concat + l) = '\0';
-	return (concat);
+	return (strnew);
 }
