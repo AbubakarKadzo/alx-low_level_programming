@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * struct dog - list dates about pet
  * @name: pet name
