@@ -1,6 +1,6 @@
 /*
  * File: 1-listint_len.c
- * Auth: A bubakar Kadzo
+ * Auth: Abubakar Kadzo
  */
 
 #include "lists.h"
