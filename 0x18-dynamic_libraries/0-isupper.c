@@ -1,13 +1,19 @@
+#include "main.h"
 /**
- * _isupper - prints if the characters are lowercase or not
- * 0 for lowercase 1 for uppercase
- * @c: the character being tested
- * Return: 0 for lowercase, 1 for uppercase
+ * _islower - shows 1 if the input is a lowercase else shows 0 .
+ * @c: The character in ASCII code
+ *
+ * Return:1 for lowercase character 0 for the rest.
  */
-int _isupper(int c)
+int _islower(int c)
 {
-	if ('A' <= c && c <= 'Z')
+	if (c >= 97 && c <= 122)
+	{
 		return (1);
+	}
 	else
+	{
 		return (0);
+	}
+	_putchar('\n');
 }
